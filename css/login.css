@@ -1,0 +1,27 @@
+
+body{
+	background-color: #AAB2BD;
+}
+.warp{
+
+	position: relative;
+	top: 200px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.login{
+
+	margin: 0 auto;
+	width: 350px;
+	background-color: #fff;
+	
+
+}
+.login .row{
+
+	margin-bottom: 15px;
+}
+.login h4{
+	text-align: center;
+}
