@@ -1,5 +1,5 @@
 <?php
-/*%%SmartyHeaderCode:1529955b7a869552451_48605946%%*/
+/*%%SmartyHeaderCode:2546655b87abfbfb053_82326909%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -7,26 +7,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e1158735fed5e7a32ff53e7ce55994431d66dd2f' => 
     array (
       0 => 'E:\\www\\easyCms\\smarty\\templates\\login.tpl',
-      1 => 1438099556,
+      1 => 1438153394,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1529955b7a869552451_48605946',
+  'nocache_hash' => '2546655b87abfbfb053_82326909',
   'tpl_function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'BasePath' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_55b7a869629208_26991017',
+  'unifunc' => 'content_55b8930649e0f2_60603790',
+  'has_nocache_code' => false,
   'cache_lifetime' => 3600,
 ),true);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55b7a869629208_26991017')) {
-function content_55b7a869629208_26991017 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55b8930649e0f2_60603790')) {
+function content_55b8930649e0f2_60603790 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -51,7 +47,7 @@ function content_55b7a869629208_26991017 ($_smarty_tpl) {
     
     <div class="warp">
       <div class="login">
-        <form class="form-horizontal">
+        <form  id="loginForm" class="form-horizontal" action="">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12">
@@ -82,12 +78,35 @@ function content_55b7a869629208_26991017 ($_smarty_tpl) {
     <script src="http://localhost/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://localhost/js/bootstrap.min.js"></script>
+    
+    <!-- Bootflat's JS files.-->
+    <script src="http://localhost/js/icheck.min.js"></script>
+    <script src="http://localhost/js/jquery.fs.selecter.min.js"></script>
+    <script src="http://localhost/js/jquery.fs.stepper.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
         
-       <!-- Bootflat's JS files.-->
-        <script src="http://localhost/js/icheck.min.js"></script>
-        <script src="http://localhost/js/jquery.fs.selecter.min.js"></script>
-        <script src="http://localhost/js/jquery.fs.stepper.min.js"></script>
+          moveCenter();
 
+          $(window).resize(function(event) {
+            
+            moveCenter();
+
+          });
+    })
+
+    function moveCenter(){
+
+        var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+          var lh = $('.warp').height();
+
+           $('.warp').css('top', (h / 2 - lh / 2) +'px' ); 
+
+
+    }
+
+    </script>
   </body>
 </html><?php }
 }

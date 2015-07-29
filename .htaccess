@@ -1,0 +1,9 @@
+# 将 RewriteEngine 模式打开
+RewriteEngine On
+# Rewrite 系统规则请勿修改
+RewriteRule ^archiver/((fid|tid)-[0-9]+\.html)$ archiver/index.php?$1
+RewriteRule ^forum-([0-9]+)-([0-9]+)\.html$ forumdisplay.php?fid=$1&page=$2
+RewriteRule ^thread-([0-9]+)-([0-9]+)-([0-9]+)\.html$ viewthread.php?tid=$1&extra=page\%3D$3&page=$2
+RewriteRule ^space-(username|uid)-(.+)\.html$ space.php?$1=$2
+RewriteRule ^tag-(.+)\.html$ tag.php?name=$1
+RewriteRule ^main$ core/main.php

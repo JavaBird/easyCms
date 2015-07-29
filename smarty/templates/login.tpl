@@ -21,11 +21,11 @@
     
     <div class="warp">
       <div class="login">
-        <form class="form-horizontal">
+        <form  id="loginForm" class="form-horizontal" action="">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12">
-                <h4>欢迎使用网站后台管理系统</h4>
+                <h4>{$title}</h4>
               </div>
             </div>
             <div class="row">
@@ -52,11 +52,34 @@
     <script src="{$BasePath}js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{$BasePath}js/bootstrap.min.js"></script>
+    
+    <!-- Bootflat's JS files.-->
+    <script src="{$BasePath}js/icheck.min.js"></script>
+    <script src="{$BasePath}js/jquery.fs.selecter.min.js"></script>
+    <script src="{$BasePath}js/jquery.fs.stepper.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
         
-       <!-- Bootflat's JS files.-->
-        <script src="{$BasePath}js/icheck.min.js"></script>
-        <script src="{$BasePath}js/jquery.fs.selecter.min.js"></script>
-        <script src="{$BasePath}js/jquery.fs.stepper.min.js"></script>
+          moveCenter();
 
+          $(window).resize(function(event) {
+            
+            moveCenter();
+
+          });
+    })
+
+    function moveCenter(){
+
+        var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+          var lh = $('.warp').height();
+
+           $('.warp').css('top', (h / 2 - lh / 2) +'px' ); 
+
+
+    }
+
+    </script>
   </body>
 </html>
