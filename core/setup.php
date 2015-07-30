@@ -27,7 +27,7 @@ class SmartyCms extends Smarty {
         $this->setCompileDir(PATH.'/smarty/templates_c/');
         $this->setConfigDir(PATH.'/smarty/configs/');
         $this->setCacheDir(PATH.'/smarty/cache/');
-        $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
+        //$this->caching = Smarty::CACHING_LIFETIME_CURRENT;
       
    }
 
