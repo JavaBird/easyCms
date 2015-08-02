@@ -1,6 +1,7 @@
 body{
 
-	 font: 14px/1.5 arial,宋体,georgia,verdana,helvetica,sans-serif;s
+	 font: 14px/1.5 arial,宋体,georgia,verdana,helvetica,sans-serif;
+   background-color: #434A54;
 }
 
 @media (min-width: 768px) {
@@ -22,15 +23,3 @@ body{
 	width: 300px;
 }
 
-.panel {
-
-          border-radius: 0px;
-  -webkit-border-radius: 0px;
-     -moz-border-radius: 0px;
-}
-
-.panel-heading {
-          border-radius: 0;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-}
